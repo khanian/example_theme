@@ -5,16 +5,17 @@ void main() {
     MaterialApp(
       home: const HomeWidget(),
       theme: ThemeData(
-        colorScheme: ColorScheme.dark(),
-        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        // colorScheme: ColorScheme.dark(),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        useMaterial3: true,
         // colorScheme: const ColorScheme.light(
         //   primary: Colors.orange,
         //   secondary: Colors.yellow,
         //   tertiary: Colors.indigo
         // ),
-        // appBarTheme: const AppBarTheme(
-        //   backgroundColor: Colors.redAccent,
-        // )
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.redAccent,
+        )
       ),
     ),
   );
