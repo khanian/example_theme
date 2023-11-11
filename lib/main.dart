@@ -10,6 +10,9 @@ void main() {
           secondary: Colors.yellow,
           tertiary: Colors.indigo
         ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.redAccent,
+        )
       ),
     ),
   );
