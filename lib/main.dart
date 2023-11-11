@@ -4,25 +4,21 @@ void main() {
   runApp(
     MaterialApp(
       home: const HomeWidget(),
-      theme: ThemeData(
-        // colorScheme: ColorScheme.dark(),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(fontWeight: FontWeight.normal, fontSize: 30)
-        ),
-        useMaterial3: true,
-        // colorScheme: const ColorScheme.light(
-        //   primary: Colors.orange,
-        //   secondary: Colors.yellow,
-        //   tertiary: Colors.indigo
-        // ),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.redAccent,
-        )
-      ),
+      theme: customTheme
     ),
   );
 }
+
+final customTheme = ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+    textTheme: const TextTheme(
+        bodyLarge: TextStyle(fontWeight: FontWeight.normal, fontSize: 30)
+    ),
+    useMaterial3: true,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.redAccent,
+    )
+);
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
@@ -36,7 +32,8 @@ class _HomeWidgetState extends State<HomeWidget> {
   
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
+    // final textTheme = Theme.of(context).textTheme;
+    final textTheme = customTheme.textTheme;
 
     return Scaffold(
       appBar: AppBar(
