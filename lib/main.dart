@@ -1,3 +1,4 @@
+import 'package:example_theme/style/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,17 +9,6 @@ void main() {
     ),
   );
 }
-
-final customTheme = ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-    textTheme: const TextTheme(
-        bodyLarge: TextStyle(fontWeight: FontWeight.normal, fontSize: 30)
-    ),
-    useMaterial3: true,
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.redAccent,
-    )
-);
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
@@ -43,8 +33,8 @@ class _HomeWidgetState extends State<HomeWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('Press Count', style: textTheme.bodyLarge,),
-            Text('$count', style: textTheme.titleLarge),
+            Text('Press Count', style: textTheme.bodyMedium,),
+            Text('$count', style: textTheme.bodyLarge),
           ],
         ),
       ),
