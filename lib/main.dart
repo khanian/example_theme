@@ -5,7 +5,8 @@ void main() {
     MaterialApp(
       home: const HomeWidget(),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.dark(),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         // colorScheme: const ColorScheme.light(
         //   primary: Colors.orange,
         //   secondary: Colors.yellow,
