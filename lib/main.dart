@@ -7,6 +7,9 @@ void main() {
       theme: ThemeData(
         // colorScheme: ColorScheme.dark(),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(fontWeight: FontWeight.normal, fontSize: 30)
+        ),
         useMaterial3: true,
         // colorScheme: const ColorScheme.light(
         //   primary: Colors.orange,
@@ -33,6 +36,8 @@ class _HomeWidgetState extends State<HomeWidget> {
   
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Theme'),
@@ -41,8 +46,8 @@ class _HomeWidgetState extends State<HomeWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('Press Count'),
-            Text('$count'),
+            Text('Press Count', style: textTheme.bodyLarge,),
+            Text('$count', style: textTheme.titleLarge,),
           ],
         ),
       ),
