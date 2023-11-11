@@ -44,7 +44,7 @@ class _HomeWidgetState extends State<HomeWidget> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text('Press Count', style: textTheme.bodyLarge,),
-            Text('$count', style: textTheme.titleLarge,),
+            Text('$count', style: textTheme.titleLarge),
           ],
         ),
       ),
